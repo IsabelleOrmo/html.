@@ -7,22 +7,91 @@
     <title>Produtos</title>
 </head>
 <body>
-    <a href='contato.html'>Contato</a>
+    <span id="topo">
+    <a href="contato.html">Contato</a>
     |
-    <a href='https://www.google.com'>Google</a>
+    <a href="https://www.google.com">Google</a>
+    |
+    <a href="#produtos">Produtos</a>
+    |
+    <a href="#produtosEspeciais">Produtos especiais</a>
+    </span>
+
+    <br><br><button onclick="botaoAlerta()">Clique aqui!</button>
+    <br><br><button onclick="d20()">Clique aqui!</button>
+
+
+    <p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+
     <hr>
     <h1>Título da página principal</h1>
     <h3>Nossos produtos:  </h3>
-    <ul>
-        <li><a href='produtos/produto1.html'>Produto 1</a></li>
-        <li><a href='produtos/produto2.html'>Produto 2</a></li>
-    </ul>
+    <a id="produtos">
+        <ul>
+            <li><a href="produtos/produto1.html">Produto 1</a></li>
+            <li><a href="produtos/produto2.html">Produto 2</a></li>
+        </ul>
+    </a>
 
-    <b>Produtos especiais:  </b>
-    <ul>
+    <span id="produtosEspeciais">
+        <b>Produtos especiais:  </b>
+        <ul>
+            
+            <li><a href="produtos/especiais/produto3.html">Produto 3</a></li>
+        </ul>
+        <span href="#topo">Topo</spans>
+    </span>
+
+    <script>
+        var a = 1;
         
-        <li><a href='produtos/especiais/produto3.html'>Produto 3</a></li>
-    </ul>
+        function botaoAlerta() {
+            a = prompt("Insira a quantidade de execuções de fibonacci a serem realizadas:  ");
+            fibonacci(a);
+        }
+
+        function fibonacci(executions) {
+            x = 0;
+            y = 1; 
+            var z;
+            count = 0;
+
+            while (count < executions) {
+                alert(x)
+                z = x + y;
+                x = y;
+                y = z;
+                count++;
+            }
+        }
+
+        function d20() {
+            return roll = random(1, 20);
+        }
+
+        function random(min, max) {
+            return (Math.round((Math.random()*(new Date()).getTime())) % ((max+1)-min) + min);
+        }
+
+        function rollUntil(targetValue, min, max){
+            var control, counter = 0;
+            while (!control) {
+                control = testValue(targetValue, d20(), counter);
+                counter++
+            }
+        }
+
+        function testValue(targetValue, value, counter) {
+            if (value == targetValue) {
+                console.log("O valor " + value + " foi rolado após " + counter + " tentativas.");
+                return true;
+            } else {
+                console.log("Ainda não.");
+                return false;
+            }
+        }
     
+    </script>
+
 </body>
 </html>
