@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de formulário!!</title>
+</head>
+<body>
+    <h1 id="titulo">Forms de funcionário</h1>
+    <form>
+        <label for="funcName">Nome:</label>
+        <input type="text" name="funcName" id="funcName" minlength="3" maxlength="10" placeholder="Digite o nome" required spellcheck>
+
+        <br><br>
+
+        <label for="funcIdade">Idade:</label>
+        <input type="number" name="funcIdade" id="funcIdade" placeholder="18" size="3" required size="3px" min="18" max="99">
+
+        <br><br>
+
+        <label for="funcSexo">Sexo:</label>
+        M <input type="radio" value="Masc">
+        F <input type="radio" value="Fem" checked>
+
+        <br><br>
+
+        <label for="funcPassword">Senha:</label>
+        <input type="password" name="funcPassword" id="funcPassword" placeholder="Digite sua senha" required minlength="8" maxlength="15">
+
+        <br><br>
+        <label name="funcPeriodo">Períodos de aula:</label>
+        <input type="checkbox" name="funcManha" value="M" checked> Manhã
+        <input type="checkbox" name="funcTarde" value="T"> Tarde
+        <input type="checkbox" name="funcNoite" value="N"> Noite
+
+        <br><br>
+        Curso:<br>
+        <select name="funcCurso" id="funcCurso">
+            <option></option>
+            <option value="Informática">Informática</option>
+            <option value="Edificações">Edificações</option>
+            <option value="Geomática">Geomática</option>
+            <option value="Mecânica">Mecânica</option>
+            <option value="Enfermagem">Enfermagem</option>
+            <option value="Qualidade">Qualidade</option>
+        </select>
+
+        <br><br>
+        <label>Disciplinas (várias):</label><br>
+        <select name="funcDisciplinas" id="funcDisciplinas" size="3" multiple>
+            <option value="BD">Banco de Dados</option>
+            <option value="LP">Lógica de programação</option>
+            <option value="DAW">Dev Web</option>
+        </select>
+
+        <br><br>
+        <input type="submit">
+    </form>
+    <button onclick="nome()">Aperte-me!</button>
+
+    <script>
+        function nome() {
+            let funcName = document.getElementsById("funcName").innerHTML
+            alert(funcName)
+        }
+    </script>
+</body>
+</html>
