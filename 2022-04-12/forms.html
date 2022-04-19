@@ -9,50 +9,108 @@
 <body>
     <h1 id="titulo">Forms de funcionário</h1>
     <form>
-        <label for="funcName">Nome:</label>
-        <input type="text" name="funcName" id="funcName" minlength="3" maxlength="10" placeholder="Digite o nome" required spellcheck>
+        <fieldset>
+            <legend>Dados pessoais</legend>
 
+            <label for="funcName">Nome:</label> <br>
+            <input type="text" name="funcName" id="funcName" minlength="3" maxlength="10" placeholder="Digite o nome" required spellcheck>
+
+            <br><br>
+
+            <label for="funcFavColor">Insira uma foto 3x4 em boa qualidade sua:</label><br>
+            <input type="file" name="funcPicture" id="funcFavColor" accept="image/png, image/jpeg">
+
+            <br><br>
+    
+            <label for="funcIdade">Idade:</label> <br>
+            <input type="number" name="funcIdade" id="funcIdade" placeholder="18" size="3" required size="3px" min="18" max="99">
+    
+            <br><br>
+    
+            <label for="funcSexo">Sexo:</label> <br>
+            M <input type="radio" value="Masc" name="funcSexo">
+            F <input type="radio" value="Fem" name="funcSexo" checked>
+    
+            <br><br>
+    
+            <label for="dataNasc">Digite sua data de nascimento:  </label> <br> 
+            <input type="date" name="dataNasc" id="dataNasc">
+    
+            <br><br>
+    
+            <label for="dataNascHora">Data e hora do cadastro:  </label> <br>
+            <input type="datetime-local" name="dataNascHora" id="dataNascHora">
+    
+            <br><br>
+
+            <label for="funcEmail">Insira seu endereço de Email:  </label><br>
+            <input type="email" name="funcEmail" id="funcEmail" required placeholder="email@email.com">
+
+            <br><br>
+    
+            <label for="funcPassword">Senha:</label> <br>
+            <input type="password" name="funcPassword" id="funcPassword" placeholder="Digite sua senha" required minlength="8" maxlength="15">
+
+            <br><br>
+            <label for="funcFavColor">Selecione sua cor predileta: </label><br>
+            <input type="color" name="funcFavColor" id="funcFavColor" value="#AF9AB2">
+        </fieldset>
+        
         <br><br>
 
-        <label for="funcIdade">Idade:</label>
-        <input type="number" name="funcIdade" id="funcIdade" placeholder="18" size="3" required size="3px" min="18" max="99">
 
-        <br><br>
+        <fieldset>
+            <legend>Dados profissionais</legend>                                                   
+            <label name="funcPeriodo">Períodos de aula:</label> <br>
+            Manhã<input type="checkbox" name="funcManha" value="M"><br>
+            Tarde&ThinSpace;<input type="checkbox" name="funcTarde" value="T"><br>
+            Noite    <input type="checkbox" name="funcNoite" value="N"><br>
+            
+            <br><br>
+    
+            <label>Horário de trabalho</label><br>
+            De: <input type="time" id="inicioTrab" name="inicioTrab">
+            a: <input type="time" id="fimTrab" name="fimTrab" >
+    
+            <br><br>
+    
+            <label for="funcMesInicio">Insira o mês de inicio das suas aulas:</label><br>
+            <input type="month" name="funcMesInicio" id="funcMesInicio">
+    
+            <br><br>
+    
+            <label for="funcSemanaInicio">Insira a semana de início de suas aulas:</label><br>
+            <input type="week" id="funcSemanaInicio" name="funcSemanaInicio">
+            
+            <br><br>
+            
+            Curso:<br>
+            <select name="funcCurso" id="funcCurso">
+                <option></option>
+                <option value="Informática">Informática</option>
+                <option value="Edificações">Edificações</option>
+                <option value="Geomática">Geomática</option>
+                <option value="Mecânica">Mecânica</option>
+                <option value="Enfermagem">Enfermagem</option>
+                <option value="Qualidade">Qualidade</option>
+            </select>
+    
+            <br><br>
 
-        <label for="funcSexo">Sexo:</label>
-        M <input type="radio" value="Masc">
-        F <input type="radio" value="Fem" checked>
+            <label>Disciplinas (várias):</label> <br><br>
+            <select name="funcDisciplinas" id="funcDisciplinas" size="3" multiple>
+                <option value="BD">Banco de Dados</option>
+                <option value="LP">Lógica de programação</option>
+                <option value="DAW">Dev Web</option>
+            </select>
 
-        <br><br>
+            <br><br>
 
-        <label for="funcPassword">Senha:</label>
-        <input type="password" name="funcPassword" id="funcPassword" placeholder="Digite sua senha" required minlength="8" maxlength="15">
+            <label for="funcExperiencia">Insira sua experiência</label>
+            <input type="range" name="funcExperiencia" id="funcExperiencia" min="0" max="5" value="0">
 
-        <br><br>
-        <label name="funcPeriodo">Períodos de aula:</label>
-        <input type="checkbox" name="funcManha" value="M" checked> Manhã
-        <input type="checkbox" name="funcTarde" value="T"> Tarde
-        <input type="checkbox" name="funcNoite" value="N"> Noite
 
-        <br><br>
-        Curso:<br>
-        <select name="funcCurso" id="funcCurso">
-            <option></option>
-            <option value="Informática">Informática</option>
-            <option value="Edificações">Edificações</option>
-            <option value="Geomática">Geomática</option>
-            <option value="Mecânica">Mecânica</option>
-            <option value="Enfermagem">Enfermagem</option>
-            <option value="Qualidade">Qualidade</option>
-        </select>
-
-        <br><br>
-        <label>Disciplinas (várias):</label><br>
-        <select name="funcDisciplinas" id="funcDisciplinas" size="3" multiple>
-            <option value="BD">Banco de Dados</option>
-            <option value="LP">Lógica de programação</option>
-            <option value="DAW">Dev Web</option>
-        </select>
+        </fieldset>
 
         <br><br>
         <input type="submit">
@@ -66,4 +124,38 @@
         }
     </script>
 </body>
+
+<style>
+    body {
+        background-color: hsl(218, 50%, 87%);
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-weight: lighter;
+    }
+
+    input {
+        min-height: 25px;
+        min-width: 200px;
+        border-radius: 3px;
+        color: black;
+        border: 0px;
+        padding: 4x;
+        opacity: 50%;
+    }
+
+    input:hover {
+        opacity: 100%;
+        transition: opacity 0.5s;
+    }
+
+    fieldset {
+        width: 50%;
+        border-style: ridge;
+        border-color: #9BB1FF;
+        border-radius: 10px;
+    }
+
+    legend {
+        font-weight: bold;
+    }
+</style>
 </html>
