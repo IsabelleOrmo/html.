@@ -8,7 +8,12 @@
 </head>
 <body>
     <h1 id="titulo">Forms de funcionário</h1>
-    <form>
+
+    <b>Busca:</b>
+    <input type="search" placeholder="Pesquisa" id="searchTerm" name="searchTerm">
+    <input type="button" value="search"> <br><br><br><br>
+
+    <form action="cadastro.php" method="get">
         <fieldset>
             <legend>Dados pessoais</legend>
 
@@ -54,6 +59,24 @@
             <br><br>
             <label for="funcFavColor">Selecione sua cor predileta: </label><br>
             <input type="color" name="funcFavColor" id="funcFavColor" value="#AF9AB2">
+
+            <br><br>
+
+            <label for="funcVeiculo">Veículo de transporte:  </label>
+            <select name="funcVeiculo" id="funcVeiculo">
+                <optgroup label="Carros">
+                    <option value="GM" selected>Chevrolet</option>
+                    <option value="VW">Volkswagen</option>
+                    <option value="Renault">Renault</option>
+                </optgroup>
+                <optgroup label="Motos">
+                    <option value="Honda">Honda</option>
+                    <option value="Yamaha">Yamaha</option>
+                    <option value="Suzuki">Suzuki</option>
+                </optgroup>
+            </select>
+
+            <br><br>
         </fieldset>
         
         <br><br>
@@ -106,21 +129,60 @@
 
             <br><br>
 
-            <label for="funcExperiencia">Insira sua experiência</label>
+            <label for="funcExperiencia">Insira sua experiência</label> <br>
             <input type="range" name="funcExperiencia" id="funcExperiencia" min="0" max="5" value="0">
 
+            <br><br>
 
+            <label for="funcConhecimento">Defina sua área de conhecimento: </label>  <br>
+            <input list="funcListaConhecimento" id="funcConhecimento" name="funcConhecimento">
+
+            <datalist id="funcListaConhecimento" id="funcConhecimento">
+                <optgroup label="Front-End">
+                    <option value="HTML5">HTML 5</option>
+                    <option value="HTML4">HTML 4</option>
+                    <option value="CSS3">CSS 3</option>
+                    <option value="JavaScript">JavaScript</option>
+                    <option value="TypeScript">TypeScript</option>
+                    <optgroup label="JS Frameworks">
+                        <option value="vueJS">Vue JS</option>
+                        <option value="svelte">Svelte</option>
+                        <option value="ReactJS">React JS</option>
+                    </optgroup>
+                </optgroup>
+                <optgroup label="Back-End">
+                    <option value="PHP">PHP</option>
+                    <option value="Node.js">JavaScript no Back-End...</option>
+                    <option value="Golang">Go</option>
+                    <option value="C#">C#</option>
+                    <option value="Java">Java</option>
+                    <option value="Ruby">Ruby</option>
+                    <option value="Python3">Python 3</option>
+                </optgroup>
+            </datalist>
+            
+            <br><br>
+
+            <label for="funcCurriculo">Insira o link do seu currículo do Linkedln</label><br>
+            <input type="url" id="funcCurriculo" name="funcCurriculo" placeholder="https://likedln.com/Usuario">
+
+            <br><br>
+
+            <label for="funcNotes">Observações:</label><br>
+            <textarea name="funcNotes" id="funcNotes" cols="30" rows="10"></textarea>
         </fieldset>
 
         <br><br>
         <input type="submit">
+        <input type="reset" name="funcReset" id="funcResetfuncReset" value="Limpar Formulário">
     </form>
     <button onclick="nome()">Aperte-me!</button>
 
     <script>
         function nome() {
-            let funcName = document.getElementsById("funcName").innerHTML
-            alert(funcName)
+            let funcName = document.getElementsById("funcName").innerHTML;
+            alert(funcName);
+            alert("aa");
         }
     </script>
 </body>
@@ -140,6 +202,7 @@
         border: 0px;
         padding: 4x;
         opacity: 50%;
+        transition: opacity 0.5s;
     }
 
     input:hover {
@@ -147,11 +210,40 @@
         transition: opacity 0.5s;
     }
 
+    label {
+        opacity: 70%;
+        color: teal;
+        transition: opacity, 0.5s;
+        transition: color, 0.5s;
+    }
+
+    label:hover {
+        opacity: 100%;
+        color: black;
+        transition: opacity, 0.5s;
+        transition: color, 0.5s;
+    }
+
     fieldset {
         width: 50%;
         border-style: ridge;
-        border-color: #9BB1FF;
+        border-color: hsl(227, 100%, 61%);
         border-radius: 10px;
+        opacity: 50%;
+        transition: opacity 0.5s;
+        transition: border-radius, 1s;
+        transition: border-style, 1s;
+    }
+
+    fieldset:hover {
+        border-radius: 30px;
+        border-style: dotted;
+        offset: 30px, 30px;
+        align-content: center;
+        opacity: 100%;
+        transition: opacity 0.5s;
+        transition: border-radius, 1s;
+        transition: border-style, 1s;
     }
 
     legend {
