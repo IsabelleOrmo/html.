@@ -13,6 +13,8 @@
     <input type="search" placeholder="Pesquisa" id="searchTerm" name="searchTerm">
     <input type="button" value="search"> <br><br><br><br>
 
+    <button onclick="sayName()"></button>
+
     <form action="cadastro.php" method="get">
         <fieldset>
             <legend>Dados pessoais</legend>
@@ -183,6 +185,11 @@
             let funcName = document.getElementsById("funcName").innerHTML;
             alert(funcName);
             alert("aa");
+        }
+
+        function sayName() {
+            let name = prompt("Digite seu nome:  ");
+            console.log("Hello World, " + name);
         }
     </script>
 </body>
