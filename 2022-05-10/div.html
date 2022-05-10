@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Div e Tableless design</title>
+</head>
+<body>
+    <div class="glass">
+        <p>
+            <a href="https://www.unicamp.br">Unicamp</a> |
+            <a href="https://www.cotil.unicamp.br">Cotil</a>
+        </p>
+    </div>
+
+    <br><br>
+
+    <div id="cursos" class="div1">
+        <p>
+            Os cursos do <span class="important">Cotil</span> são:  
+            <ul>
+                <li><span class="important">Desenvolvimento de Sistemas<span/></li>
+                <li>Enfermagem</li>
+                <li>Geodésia</li>
+                <li>Qualidade</li>
+                <li>Mecânica</li>
+                <li>Edificações</li>
+            </ul>
+        </p>
+    </div>
+</body>
+
+<style type="text/css">
+    body {
+        background-color: hsl(176, 73%, 76%);
+        color: #2E0219;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    div {
+        margin: 1%;
+        padding: 1%;
+        width: 40%;
+        border: 2.5px;
+        border-radius: 10px;
+        border-style: dotted;
+        border-color: darkcyan;
+        transition: all, 1s;
+        color: hsl(318, 83%, 93%);
+    }
+   
+    div:hover {
+        border-radius: 25px; 
+        border-color: hsl(180, 50%, 50%); 
+        opacity: 100%;
+        transition: all, 1s;
+    }
+
+    .div1 {
+        opacity: 70%;
+        transition: all, 1s;
+    }
+
+    .glass {
+        background: rgba(255, 255, 255, 0.24);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(9.2px);
+        -webkit-backdrop-filter: blur(9.2px);
+        transition: all, 1s;
+    }
+
+    .glass:hover {
+        transition: all, 1s;
+    }
+
+    #cursos {
+        background-color: hsl(176, 73%, 55%);
+    }
+
+    #cursos:hover {
+        background-color: hsl(176, 73%, 76%);
+    }
+
+    .important {
+        font-weight: bold;
+    }
+
+    .important:hover {
+        color: grey;
+        text-decoration: underline;
+        transition: all, 0.2s;
+    }
+</style>
+
+</html>
