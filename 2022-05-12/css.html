@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <!--
+        Os estilos funcionam em CASCATA, assim, o nível mais baixo sempre será o estilo aplicado.
+
+        Por exemplo, os estilos de um ID irão sobreescrever os estilos do elemento, e os estilos inline sobreescreverão ambos.
+
+        Classes devem ser utilizadas para definir um estilo a ser reutilizado. 
+        Os estilos podem também ser aplicados no ID, entretanto, IDs só devem ser usados uma vez.
+
+        Estilos inline devem ser evitados para garantir consistência no código, facilidade de leitura e facilitar o entendimento.
+        
+        tag {
+            styles: style;
+        }
+
+        #id {
+            styles: style;
+        }
+
+        .class {
+            styles: style;
+        }
+
+        Já que os estilos funcionam em cascata, um elemento pode receber formatação inline, por id, por classe e por elemento, simultaneamente.
+        Todos os estilos desses caso serão aplicados nessa tag, e estilos repetidos obedecerão a hierarquia.
+
+        Múltiplas classes podem ser aplicadas em um mesmo elemento.
+
+        <span class="class1, class2"> <span/>
+    -->
+
+    <span id="oi" align="center">Oi Ormo!</span>
+
+    <!--Exemplo de uso de CSS inline-->
+    <p style="color: blue; font-weight: lighter;">
+        oi. ormo.
+    </p>
+
+    <!--Exemplo de uso de classes-->
+    <span class="textoBrancoPequeno">Lista de cores de cabelo:</span>
+    <ul>
+        <li>ruivo</li>
+        <li>preto</li>
+        <li>castanho</li>
+        <li>loiro</li>
+    </ul>
+
+    <span class="bonito">Teste com stylesheet externa</span>
+
+</body>
+
+<style>
+    /* Exemplo de aplicação de CSS no elemento body */
+    body {
+        font-family: "Comic Sans MS", cursive, sans-serif;
+        background-color: palevioletred;
+        color: red;
+    }
+
+    /* Exemplo de aplicação de CSS no ID de um elemento */
+    #oi {
+        color: steelblue;
+        text-transform: capitalize;
+        text-decoration: underline;
+        text-decoration: wavy;
+        font-size: xx-large;
+        text-align: center;
+        align-content: center;
+        align-self: center;
+    }
+
+    /* Exemplo de aplicação de CSS em uma classe */
+    .textoBrancoPequeno {
+        color: white;
+        font-size: small;
+    }
+
+    /* Exemplo de aplicação de CSS em todas as instâncias de um elemento */
+    p {
+        background-color: beige; 
+        width: fit-content; 
+        font-size: 100px; 
+        font-weight: bolder; 
+    }
+
+    ul {
+        color: blue;
+        font-size: 20px;
+    }
+</style>
+
+</html>
