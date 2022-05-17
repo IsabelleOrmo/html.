@@ -125,7 +125,7 @@ No arquivo CSS, coloque as referências a IDs e classes, juntamente com os estil
 
 Todos os três métodos, devido a natureza de cascata do CSS, podem ser utilizados simultaneamente.
 
-Para definir o que uma classe deve fazer apenas quando aplicada a um tipo de elemento específico, informe a sua tag, seguida de um ponto, seguida do nome da classe. 
+Para definir o que uma classe deve fazer apenas quando aplicada a um tipo de elemento específico, informe a sua tag, seguida de um ponto, seguida do nome da classe.
 
 ```css
 /* Faz com que o texto de todas as tags span que recebem a classe MyClass fiquem em negrito. */
