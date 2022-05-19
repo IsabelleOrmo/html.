@@ -32,16 +32,32 @@
         Rodapé: Bom dia@!
     </p>
 
+    <p class="textoDestacado">
+        Eu não sei!
+    </p>
 
 </body>
 
 <style>
     p {
-        font-family: "Impact", 'Times New Roman';
+        text-indent: 10px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        transition: all, 0,5s;
+    }
+
+    p:hover {
+        font-weight: bold;
+        background-color: bisque;
+        transition: all, 0,5s;
+    }
+
+    .textoDestacado {
+        text-transform: capitalize;
     }
 
     .rodape {
         font-size: 10px;
+        text-decoration: underline;
     }
 
     .fonteBonita {
@@ -52,6 +68,7 @@
         font-variant: small-caps;
         font-style: italic;
         font-weight: 700;
+        text-shadow: 500px 0px 0px red, 300px 0px 0px red;
     }
 
     #cotil {
