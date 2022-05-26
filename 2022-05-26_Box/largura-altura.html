@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="menu">
+        <a href="http://">Cotil</a>
+        |
+        <a href="http://">Unicamp</a>
+    </div>
+
+    <div id="textoUnicamp" class="divText">
+        <span id="cotil" class="textoBonito">Cotil - Unicamp</span>
+        <br>
+        Iniciou seu funcionamento nas instalações provisórias do Ginásio Estadual Industrial Trajano Camargo de Limeira e, em 09 de setembro de 1973, passou para as novas instalações no atual campus I da UNICAMP em Limeira
+    </div>
+</body>
+
+<style>
+    body {
+        background-color: hsl(189, 65%, 22%);
+        margin: 0;
+        background-image: url("../docs/assets/images/coelho-comendo.jpg");
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+
+    #menu {
+        color:hsl(189, 65%, 22%);
+        font-size: xx-large;
+        text-transform: capitalize;
+        background-color: hsl(208, 100%, 97%);
+        padding: 5px 10px 5px 10px;
+        margin-bottom: 10px;
+    }
+
+    a {
+        color:hsl(258, 6%, 50%); 
+        text-decoration: none;
+        opacity: 70%;
+        transition: all, 0.5s;
+    }
+
+    a:hover {
+        text-decoration: underline;
+        color: hsl(260, 1%, 58%);
+        opacity: 100%;
+        transition: all, 0.5s;
+    }
+
+    .divText {
+        background-color: hsla(183, 81%, 35%, 50%);
+        padding: 10px;
+        width: 500px;
+
+        padding-inline: 20px;
+        border-radius: 10px;
+
+        padding: 15px, 20px, 15px, 20px;
+        margin: 10px auto;
+    }
+
+    .textoBonito {
+        font-weight: 600;
+    }
+</style>
+
+</html>
