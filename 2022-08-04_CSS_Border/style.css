@@ -1,0 +1,23 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.box {
+    border-radius: min(25rem, 50px);
+    margin: min(5rem, 25px);
+    width: clamp(50px, 50rem, 500px);
+    border-width: 3px;
+    border-style: groove;
+    border-color: coral;
+    border-top-color: darkorange;
+    background-color: violet;
+}
+
+table {
+    border: 1px, solid, red;
+}
+
+table td {
+    border: 1px, solid, yellow;
+}

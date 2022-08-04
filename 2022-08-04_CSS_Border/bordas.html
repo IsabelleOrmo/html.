@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de bordas</title>
+</head>
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .box {
+        border-radius: min(25rem, 50px);
+        margin: min(5rem, 25px);
+        width: clamp(50px, 50rem, 500px);
+        border-width: 3px;
+        border-style: groove;
+        border-color: coral;
+        border-top-color: darkorange;
+        background-color: violet;
+    }
+
+    table {
+        border: 1px solid red;
+    }
+
+    table td {
+        border: 1px solid yellow;
+    }
+</style>
+
+<body>
+
+    <!--h1{Listinha}+br+{Lista de Cafés}+br+div>ul>li*5-->
+
+    <h1>Listinha</h1>
+    
+    <br>
+    <b>Lista de Cafés</b>
+    <br>
+
+    <div style="display: flex; justify-content: center;">
+        <div class="box">
+            <ul>
+                <li>Expresso</li>
+                <li>Com leite</li>
+                <li>Com doce de leite</li>
+                <li>Latte</li>
+                <li>Cappucino</li>
+                <li>Ormo</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- br+br+table>tr>td{Célula $}*2^tr>td{Célula $@3}*2 -->
+    <br><br>
+
+    <table>
+        <tr>
+            <td>Célula 1</td>
+            <td>Célula 2</td>
+        </tr>
+        <tr>
+            <td>Célula 3</td>
+            <td>Célula 4</td>
+        </tr>
+    </table>
+</body>
+</html>
