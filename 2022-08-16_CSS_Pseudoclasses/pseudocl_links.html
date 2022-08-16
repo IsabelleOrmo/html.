@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudoclasses - Links</title>
+</head>
+
+<style>
+    a:link {
+        text-decoration: none;
+        color: hsl(219, 79%, 66%);
+        font-weight: bold;
+    }
+
+    a:hover {
+        text-decoration: underline;
+        color: hsl(219, 79%, 36%);
+    }
+
+    a:active {
+        color: hsl(220, 60%, 36%);
+    }
+
+    a:visited {
+        color: hsl(219, 40%, 36%);
+    }
+
+
+    input:hover {
+        background-color: darkgoldenrod;
+        border: 1px solid hsl(147, 50%, 47%);
+        border-radius: 10px;
+        color: whitesmoke;
+    }
+
+    input:focus {
+        background-color: blanchedalmond;
+        border: 1px solid darkcyan;
+        border-radius: 10px;
+        color: black;
+    }
+
+    img {
+        width: 4vw;
+    }
+
+    img:hover {
+        width: 10vw;
+    }
+</style>
+
+<body>
+    <h1><a href="https://www.google.com" target="_blank">Cotil - Unicamp</a></h1>
+
+    <div>
+        <form action="">
+            <label for="email">E-mail:  </label><br>
+            <input type="text" name="email" id="email" size="30">
+            
+            <br><br>
+            
+            <label for="senha">Senha:  </label><br>
+            <input type="password" id="senha">
+            
+            <br><br>
+            
+            <input type="submit" value="Enviar">
+        </form>
+    </div>
+
+    <img src="../docs/assets/images/at_icon.png" alt="">
+</body>
+</html>
