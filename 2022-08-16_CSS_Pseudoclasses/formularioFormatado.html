@@ -6,25 +6,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário de Cadastro</title>
 	<link rel="stylesheet" href="style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,400&display=swap" rel="stylesheet">
 </head>
 
 <style>	
 	body {
 		background-color: #88CCF1;
 		margin: 15px;
+		font-family: 'Montserrat', sans-serif;
+		font-weight: normal;
 	}
 
 	label {
 		color: #C1DFF0;
+		font-weight: bold;
 	}
 
 	input {
-		border-style: none;
+		border: 3px solid #50D8D7;
 		border-radius: 15px;
 		height: 20px;
 		background-color: #50D8D7;
 		color: black;
 		padding: 2px 7px;
+		transition: all 0.5s;
+	}
+
+	input:hover {
+		border: 3px solid yellowgreen;
+		transition: all 0.5s;
+	}
+
+	input:focus {
+		border: 3px solid yellowgreen;
+		background-color: hsl(180, 64%, 48%);
+		border-radius: 10px;
+		transition: all 0.5s;
+	}
+
+	button {
+		background-color: antiquewhite;
+		border: 2px solid #B279A7;
+		height: 1.5rem;
+		width: 7rem;
+		border-radius: 15px;
+		text-shadow: 1px 1px black;
+		color: #474044;
+		font-weight: bold;
+		transition: all 0.5s;
+	}
+
+	button:hover {
+		background-color: hsl(34, 78%, 81%);
+		border-radius: 10px;
+		border-color: hsl(312, 27%, 49%);
+		transition: all 0.5s;
+	}
+
+	button:focus {
+		color: white;
+		background-color: black;
+		border-color: white;
+		transition: all 0.01s;
+	}
+
+	.lblOptton {
+		font-weight: inherit;
+		color: hsl(202, 61%, 75%);
 	}
 
 	.formulario {
@@ -34,7 +84,7 @@
 	}
 
 	.campo {
-		margin-bottom: 10px;
+		margin-bottom: 15px;
 	}
 </style>
 
@@ -58,15 +108,15 @@
 			
 				<div class="campo">
 					<label>Escolha suas frutas favoritas</label><br>
-					<input id="laranja" type="checkbox" value="laranja"><label for="laranja">Laranja</label><br>
-					<input id="maca" type="checkbox" value="maca"><label for="maca">Maçã</label><br>
-					<input id="banana" type="checkbox" value="banana"><label for="banana">Banana</label><br>
+					<input id="laranja" type="checkbox" value="laranja"><label for="laranja" class="lblOptton">Laranja</label><br>
+					<input id="maca" type="checkbox" value="maca"><label for="maca" class="lblOptton">Maçã</label><br>
+					<input id="banana" type="checkbox" value="banana"><label for="banana" class="lblOptton">Banana</label><br>
 				</div>
 			
 				<div class="campo">
 					<label>Sexo</label><br>
-					<input name="sexo" id="f" type="radio" value="f"><label for="f">F</label><br>
-					<input name="sexo" id="m" type="radio" value="m"><label for="m">M</label><br>
+					<input name="sexo" id="f" type="radio" value="f"><label for="f" class="lblOptton">F</label><br>
+					<input name="sexo" id="m" type="radio" value="m"><label for="m" class="lblOptton">M</label><br>
 				</div>
 			
 				<div class="campo">
@@ -94,7 +144,7 @@
 					<input id="pagina" type="url" placeholder="https://suapagina.com">
 				</div>
 			
-				<input type="submit" value="Cadastrar">
+				<button type="submit" value="Cadastrar">Cadastrar</button>
 			</form>
 	</div>
 </body>
