@@ -5,11 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gradientes</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
 
 <style>
     body {
-        height: 98.4vh;
+        margin: 0;
+        height: 100vh;
+        background-repeat: no-repeat;
         background: linear-gradient(to bottom right, red, purple, blue, aqua, yellow, lime, orange, red);
         display: flex;
         align-items: center;
@@ -25,6 +29,19 @@
         position: absolute;
         bottom: 32%;
         /* border: solid black 10px; */
+
+    }
+
+    h1 {
+        animation: bounceInLeft;
+        animation-duration: 5s;
+    }
+    
+    span {
+        animation: bounce;
+        animation-duration: 5s;
+        animation-delay: 1s ;
+        animation-iteration-count: infinite;
     }
 
     img {
@@ -33,13 +50,28 @@
         left: 60%;
         width: 20vw;
         box-shadow: -0.001vw -0.001vw 0.2rem hsla(0, 0%, 0%, 0.4);
+        animation-name: spen;
+        animation-duration: 5s;
+        animation-delay: 4s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate-reverse;
+    }
+
+    @keyframes spen {
+        from {
+            transform: rotate(0deg);
+        } to {
+            transform: rotate(360deg);
+        }
     }
 </style>
 
 <body>
     <div>
-        <h1>Graphic Design is my Passion.</h1>
-        <img src="../docs/assets/images/graphic-cat.png">
+        <img src="../docs/assets/images/graphic-cat.png"> 
+        <span>
+            <h1>Graphic Design is my Passion.</h1>
+        </span>
     </div>
 </body>
 </html>
