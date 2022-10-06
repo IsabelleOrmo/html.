@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Álbum - grid</title>
+
+    <style>
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 700px), 1fr));
+            grid-template-rows: repeat(auto-fit, 600px);
+        }
+
+        figure {
+            background-color: aquamarine;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        caption {
+            font-weight: bold;
+            margin: 1rem;
+        }
+
+        .img {
+            width: fit-content;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <figure>
+            <img src="https://picsum.photos/250" alt="">
+            <caption>Imagem 1</caption>
+        </figure>
+        <figure>
+            <img src="https://picsum.photos/800/500" alt="">
+            <caption>Imagem 2</caption>
+        </figure>
+        <figure>
+            <img src="https://picsum.photos/500/100" alt="">
+            <caption>Imagem 3</caption>
+        </figure>
+        <figure>
+            <img src="https://picsum.photos/700/300" alt="">
+            <caption>Imagem 4</caption>
+        </figure>
+        <figure>
+            <img src="https://picsum.photos/1000/500" alt="">
+            <caption>Imagem 5</caption>
+        </figure>
+    </div>
+</body>
+</html>
